@@ -12,7 +12,6 @@ const AboutUs = ()=>{
           setIsDisabled(true);
 
     }
-
     return(
         <>
            <header>
