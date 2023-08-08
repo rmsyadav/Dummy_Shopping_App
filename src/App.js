@@ -1,11 +1,12 @@
-
-import { useState } from 'react';
+import React from 'react';
+import { Suspense, useState } from 'react';
 import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
-import Home from './Components/Home';
-import Navbar from './Components/Navbar';
-import Carts from './Components/Carts';
-import AboutUs from './Components/AboutUs';
 import MyContext from './Store/MyContext';
+import MyErrorBoundary from './Components/UtilityComponents/MyErrorBoundary';
+const Navbar = React.lazy(()=>import("./Components/Navbar"));
+const Carts = React.lazy(()=> import("./Components/Carts"));
+const AboutUs = React.lazy(()=> import("./Components/AboutUs"));
+const Home = React.lazy(()=> import("./Components/Home"));
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
   return (
     <>
     <MyContext.Provider value={{contextValue,setContextValue}}>
+     <Suspense fallback={<div>Loadin...</div>}>
+     <MyErrorBoundary>
       <Router>
         <Navbar></Navbar>
           <Routes>
@@ -25,6 +28,8 @@ function App() {
             <Route exact path='/about' element={<AboutUs></AboutUs>}></Route>
           </Routes>          
         </Router>
+        </MyErrorBoundary>
+        </Suspense>  
         </MyContext.Provider>  
     </>
   );
