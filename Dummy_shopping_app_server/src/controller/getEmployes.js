@@ -12,20 +12,26 @@ const login = async(req,res) =>{
       
       if(isUserFound.length > 0)
       {
-        console.log(isUserFound);
         jsonToken.sign({users},secrateKey,{expiresIn:'300s'},(error,token)=>{
-        res.send({users:isUserFound,token:token});
+        res.send({users:isUserFound.username,token:token,statusCode:200,statusMessage:"success!"});
         })
       } else {
-        res.send("userName or password is wrong! please check once");
+        res.json({statusCode:404,statusMessage:"error!"});
       }
 
 };
 const register = async(req,res) =>{
   console.log(req.body)
   const user = new employesModel(req.body);
-  await user.save();
-  res.send(req.body);
+  const isUserSave = await user.save();
+  if(isUserSave)
+    {
+      res.json({statusCode:200,statusMessage:"success!"});
+      
+    } else {
+      res.json({statusCode:404,statusMessage:"error!"});
+  }
+  
 } 
 const profile = (req,res) =>{
     

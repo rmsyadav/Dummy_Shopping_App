@@ -70,7 +70,7 @@ const Navbar = ()=>{
                     </button>
                     </li>
                     <li>
-                        <NavLink to="#" className="hover-NavLink secondary-button">Sign in</NavLink>
+                        <NavLink to="signin" className="hover-NavLink secondary-button">Sign in</NavLink>
                     </li>
                     <li>
                        

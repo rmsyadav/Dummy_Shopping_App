@@ -4,7 +4,6 @@ import React, { createContext, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import store from './Store/Productstore';
 import { Provider } from 'react-redux';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyErrorBoundary from './Components/UtilityComponents/MyErrorBoundary';

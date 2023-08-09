@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const EmployesSchema = new mongoose.Schema({
   username: {
     type: String,
-    required: true,
+    default: true,
   },
   password: {
     type: String,

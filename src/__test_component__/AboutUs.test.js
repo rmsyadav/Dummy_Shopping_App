@@ -1,6 +1,6 @@
 import { render, screen, fireEvent} from '@testing-library/react';
 import {BrowserRouter as Router, Routes,Route} from 'react-router-dom';
-import AboutUs from './AboutUs';
+import AboutUs from '../Components/AboutUs';
 
 test('renders learn react link', () => {
   const view= render(<Router>
