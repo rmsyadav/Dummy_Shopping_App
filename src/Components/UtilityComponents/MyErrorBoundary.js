@@ -3,12 +3,12 @@ import { Component } from "react";
 
 class MyErrorBoundary extends Component {
 
-    // constructor(props){
-    //     super(props);
-    //     this.logErrorToServices = console.log;
+    constructor(props){
+        super(props);
+        this.logErrorToServices = console.log;
         
 
-    // }
+    }
     state = { hasError: false };
     static getDerivedStateFromError(error){
         // Update state so the next render will show the fallback UI.

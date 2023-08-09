@@ -37,7 +37,7 @@ const Navbar = ()=>{
     return (
         <>
           <div className="container-fluid header-banner">
-              <div className="container">
+              <div className="container-div">
                   <div className="header-banner-text">
                      <h1 className="banner-text">📣 Products is now available in less prize! check more →</h1>
                   </div>
@@ -45,7 +45,7 @@ const Navbar = ()=>{
               </div>
           </div>
           <nav>
-        <div className="container main-nav flex">
+        <div className="container-div main-nav flex">
             <span href="#" className="Company-logo">
                 <label>Shopping Store →</label>
             </span>
@@ -74,7 +74,7 @@ const Navbar = ()=>{
                     </li>
                     <li>
                        
-                        <NavLink to="#" className="hover-NavLink primary-button">Sign up</NavLink>
+                        <NavLink to="signup" className="hover-NavLink primary-button">Sign up</NavLink>
                     </li>
                </ul>
             </div>

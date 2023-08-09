@@ -15,7 +15,7 @@ const AboutUs = ()=>{
     return(
         <>
            <header>
-            <div class="container header-section flex">
+            <div class="container-div header-section flex">
                 <div class="header-left flex">
                     <h1>Shopping.com →</h1>
                     <p>Shopping store is a vast Internet -based enterprise that sells books, music, movies, housewares, electronics, toys, and many other goods, either directly or as the middleman between other retailers and Shopping store millions of customers.</p>

@@ -29,7 +29,7 @@ function Home() {
     }
     return (
        <>
-        <div className="container">
+        <div className="container-div">
           <div className="flex home-carts">
            {productSlice && productSlice.products && productSlice.products.map((product,index)=>{
               return (<div key={index}>

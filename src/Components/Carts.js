@@ -22,7 +22,7 @@ const Carts = (props)=>{
   }
     return(
     <>
-        <div className="container">
+        <div className="container-div">
          {cartsSlice.carts.length <=0 ?<div className="flex cartNotAvailable">
             <img src={cartEmpty}></img>
             <Footer></Footer>
