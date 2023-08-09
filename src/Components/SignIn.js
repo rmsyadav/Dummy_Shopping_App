@@ -3,6 +3,9 @@ import Signin from "../Stylesheet/SignIn.css";
 import { useFormik } from 'formik';
 import customApi from "../customFetchApi/fetchApi";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setUserDetails } from "../Slice/userDetailsSlice";
+
 
 const validate = (values)=>{
     const errors = {};
@@ -25,6 +28,7 @@ const sleep = async (milliseconds) => {
 };
 const SignIn = ()=>{
     const [isSuccessLogin,setIsSuccessLogin] = useState();
+   const dispatch = useDispatch();
     const navigate= useNavigate();
     const formik = useFormik({
         initialValues: {
@@ -40,8 +44,7 @@ const SignIn = ()=>{
           const response = await customApi.post('/shopping/api/v1/login',userDeatils);
           if(response.data.statusCode === 200 && response.data.statusMessage === "success!" )
           {
-            sessionStorage.setItem("username", response.data.username);
-            sessionStorage.setItem("authcode", response.data.authcode);
+            dispatch(setUserDetails(response.data));
             setIsSuccessLogin("success")
             await sleep(2000);
             navigate('/');
