@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/Dummy_shopping_app_server/node_modules
 /.pnp
 .pnp.js
 
