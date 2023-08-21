@@ -1,4 +1,5 @@
 const fs = require('fs');
+
 const path = require("path");
 
 var dummyJsonData = fs.readFileSync(path.join(__dirname,'../Database/dummy.json'),'utf-8');
@@ -18,6 +19,7 @@ const getProductById = (req,res) =>{
 
 };
 const getAllProducts = (req,res) => {
+   console.log("all produts")
    res.send(dummyJsonData);  
 }
 

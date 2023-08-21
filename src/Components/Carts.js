@@ -6,7 +6,7 @@ import Card from "./UtilityComponents/Card";
 import cartEmpty from "../Asset/emptyCart.png"
 import Footer from "./UtilityComponents/Footer";
 
-const Carts = (props)=>{
+const Carts = ()=>{
 
     const [ProductDetails, setProductDetails] = useState();
     const [isShowPopupModal,setIsShowPopupModal] = useState(false);

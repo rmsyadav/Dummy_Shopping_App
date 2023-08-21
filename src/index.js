@@ -1,19 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import React, { createContext, useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import store from './Store/Productstore';
 import { Provider } from 'react-redux';
-import App from './App';
+import Parentrouter from './ParentRouter';
 import reportWebVitals from './reportWebVitals';
-import MyErrorBoundary from './Components/UtilityComponents/MyErrorBoundary';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 root.render(
   <React.StrictMode>
     <Provider  store={store}>
-       <App></App>
+       <Parentrouter></Parentrouter>
     </Provider>   
   </React.StrictMode>
 );
